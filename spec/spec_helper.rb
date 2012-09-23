@@ -1,5 +1,3 @@
-require 'bundler'
-Bundler.require :default, :test
 require 'sunspot_mongo_mapper'
 
 MongoMapper.database = 'sunspot_mongo_mapper'
