@@ -1,13 +1,9 @@
-require 'sunspot'
-require 'mongo_mapper'
-require 'sunspot_sinatra'
-
 module Sunspot
   module MongoMapper
     extend ActiveSupport::Concern
 
     included do
-      extend Sunspot::Sinatra::Searchable::ActsAsMethods
+      extend Searchable::ActsAsMethods
       Sunspot::Adapters::DataAccessor.register DataAccessor, self
       Sunspot::Adapters::InstanceAdapter.register InstanceAdapter, self
     end
